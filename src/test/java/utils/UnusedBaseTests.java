@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import com.xray.tutorials.pages.*;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class BaseTests {
+public class UnusedBaseTests {
 
 	private static WebDriver webDriver;
 	protected static Page homePage;

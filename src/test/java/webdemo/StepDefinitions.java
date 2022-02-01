@@ -7,7 +7,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import utils.BaseTests;
 
 import java.net.MalformedURLException;
 
@@ -49,8 +48,6 @@ public class StepDefinitions {
 
     @Given("browser is opened to login page")
     public void browser_is_opened_to_login_page() {
-        //WebDriver wd = BaseTests.getWebDriver();
-        //System.out.println(wd);
         LoginPage loginPage = new LoginPage(webDriver);
         loginPage.visit();
         this.currentPage = loginPage;
