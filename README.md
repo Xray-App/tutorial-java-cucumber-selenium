@@ -1,14 +1,14 @@
 # Tutorial with Cucumber scenarios/tests, in Java, integrated with Xray
 
-[![build workflow](https://github.com/Xray-App/tutorial-java-cucumber/actions/workflows/main-cloud.yml/badge.svg)](https://github.com/Xray-App/tutorial-java-cucumber/actions/workflows/main-cloud.yml)
+[![build workflow](https://github.com/Xray-App/tutorial-java-cucumber-selenium/actions/workflows/main-cloud.yml/badge.svg)](https://github.com/Xray-App/tutorial-java-cucumber-selenium/actions/workflows/main-cloud.yml)
 [![license](https://img.shields.io/badge/License-BSD%203--Clause-green.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/Xray-App/community)
 
 ## Overview
 
-Code that supports the tutorial [Testing using Cucumber in Java](https://docs.getxray.app/display/XRAYCLOUD/Testing+using+Cucumber+in+Java) showcasing the integration between [Xray Test Management](https://www.getxray.app/) on Jira and Cucumber (Java).
+Code that showcases the usage of Cucumber (Java) and Selenium WebDriver, integrated with [Xray Test Management](https://www.getxray.app/); it's an evolution of the simpler tutorial [Testing using Cucumber in Java](https://docs.getxray.app/display/XRAYCLOUD/Testing+using+Cucumber+in+Java).
 
-The test automation code implements some basic tests (i.e. scenarios/scenario outlines) for a dummy calculator, using two stories (i.e. addition and multiplication) as the features we aim to deliver.
+The test automation code implements some basic tests (i.e. scenarios/scenario outlines) for a [dummy site](http://robotwebdemo.herokuapp.com/), where the login and logout procedures are tested, using two stories (i.e. login and logout) as the features we aim to deliver.
 
 ## Prerequisites
 
