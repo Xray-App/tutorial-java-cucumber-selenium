@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.xray.tutorials.pages.*;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class BaseTests {
 
@@ -14,9 +15,10 @@ public class BaseTests {
 
 	@BeforeClass
 	public static void launchApplication(){
-		//setChromeDriverProperty();
-		System.out.println("bla bla");
-		webDriver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox"); // Bypass OS security model, to run in Docker
+        options.addArguments("--headless");
+        webDriver = new ChromeDriver(options);
 		webDriver.get("https://robotwebdemo.herokuapp.com");
 		homePage = new Page(webDriver);
 	}

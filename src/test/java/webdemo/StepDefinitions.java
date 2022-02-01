@@ -75,12 +75,10 @@ public class StepDefinitions {
 
     @Before
     public void setUp(Scenario scenario) throws MalformedURLException {
-        //ChromeOptions caps = new ChromeOptions();
-
-		this.webDriver = new ChromeDriver();
-		//webDriver.get("https://robotwebdemo.herokuapp.com");
-		//homePage = new Page(webDriver);
-        //wait = new WebDriverWait(webDriver, 10);
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox"); // Bypass OS security model, to run in Docker
+        options.addArguments("--headless");
+		this.webDriver = new ChromeDriver(options);
     }
 
     @After
