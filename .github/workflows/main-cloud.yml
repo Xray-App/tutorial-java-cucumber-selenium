@@ -38,6 +38,7 @@ jobs:
         rm -f features/*.feature
         unzip -o $FEATURES_FILE  -d features
     - name: Run tests
+      continue-on-error: true
       run: |
         mvn test -Dcucumber.plugin="json:report.json" -Dcucumber.features="features/" || /bin/true
     - name: generate auxiliary JSON to define some fields on the Test Execution to be created
