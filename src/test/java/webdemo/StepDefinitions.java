@@ -6,9 +6,11 @@ import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.AfterStep;
 import org.junit.Assert;
 
 import java.net.MalformedURLException;
+import java.nio.file.Files;
 
 import com.xray.tutorials.pages.LoginPage;
 import com.xray.tutorials.pages.Page;
@@ -75,6 +77,7 @@ public class StepDefinitions {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox"); // Bypass OS security model, to run in Docker
         options.addArguments("--headless");
+        options.addArguments("--remote-allow-origins=*");
 		this.webDriver = new ChromeDriver(options);
     }
 
@@ -87,4 +90,13 @@ public class StepDefinitions {
         }
         webDriver.quit();
     }
+
+    /* as an example, if we want to take a screenshot after each step ..
+    @AfterStep
+    public void takeScreenshot(Scenario scenario) {
+        byte[] data = ((RemoteWebDriver) this.webDriver).getScreenshotAs(OutputType.BYTES);
+        scenario.attach(data, "image/png", "Evidence");
+    }
+    */
+
 }
